@@ -1,3 +1,5 @@
+<!-- need to fix the borders styling in the form -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +9,7 @@
       content="width=device-width, height=device-height, initial-scale=1.0"
     />
     <link rel="icon" href="./images/logo.png" />
-    <title>מרכזי הטניס והחינוך בישראל - ילדים</title>
+    <title>מרכזי הטניס והחינוך בישראל - מבוגרים</title>
     <link rel="stylesheet" href="style.css?=v2.3" />
     <link
       rel="stylesheet"
@@ -163,8 +165,8 @@
       </div>
 
       <div id="section2" class="midSection">
-        <div dir="rtl" class="left" id="midLeft">
-          <div class="left-contents">
+        <div dir="rtl" class="center" id="center">
+          <div class="center-contents">
             <div dir="rtl" class="subtitle-mobile-container">
               <p class="mobile-hero">
                 אימוני טניס בכל הרמות
@@ -244,14 +246,6 @@
           </div>
         </div>
       </div>
-      <div dir="rtl" class="right" id="midRight">
-        <p>
-          החלה ההרשמה לבית הספר המקצועי לטניס
-          <br />
-          אימוני טניס לילדים בכל הרמות, בהדרכת המאמנים
-          <br />
-          הטובים בישראל. לגילאי 18-4
-        </p>
         <div class="main-image">
           <img
             class="animate_opacity"
@@ -259,26 +253,35 @@
             alt="תמונה ילדים לוחצים ידים של מרכזי הטניס והחינוך בישראל"
           />
         </div>
-      </div>
+        <div class="right" id="midRight">
+        </div>
     </div>
 
     <hr />
 
     <div dir="rtl" id="section3" class="footer-mobile">
-      <div class="logo-mobile">
+      <div class="logo-mobile-container">
         <img
-          id="mobile-logo"
+          class="logo-image"
           src="./images/logo.png"
           alt="לוגו מרכזי הטניס והחינוך בישראל"
         />
       </div>
+      <div class="footer-mobile">
+        <div class="footer-title">
+          <span class="black-font">טניס...</span> זה לא משחק <span class="black-font">זה אורח חיים</span>
+        </div>
+        <div class="footer-contact">
+          <p>24 מרכזים ושלוחות בכל הארץ</p>
+          <p class="tel black-font">6227*</p>
+        </div>
     </div>
 
-    <img
+    <!-- <img
       class="logo-desktop"
       src="./images/logo.png"
       alt="לוגו מרכזי הטניס והחינוך בישראל"
-    />
+    /> -->
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
