@@ -70,7 +70,7 @@
     <!-- End Google Tag Manager -->
   </head>
 
-  <body>
+  <body dir="rtl">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -157,17 +157,38 @@
         </div>
       </div>
 
-      <div dir="rtl" id="section1" class="main-title-mobile">
+      <div id="section1" class="main-title-mobile">
         <div class="line"></div>
         <h1>מחבט יוקרתי מתנה</h1>
         <p>עד גמר המלאי</p>
         <div class="line"></div>
       </div>
 
+      <div id="section1" class="main-title-desktop">
+        <h1>רוצים להיות אלופים?</h1>
+      </div>
+
       <div id="section2" class="midSection">
-        <div dir="rtl" class="center" id="center">
-          <div class="center-contents">
-            <div dir="rtl" class="subtitle-mobile-container">
+        
+        <div class="desktop-right" id="midRight">
+          <div class="desktop-image">
+            <img
+            class="animate_opacity"
+            src="./images/image.png"
+            alt="תמונה ילדים לוחצים ידים של מרכזי הטניס והחינוך בישראל"
+          />
+          </div>
+        </div>
+
+          <div class="left-contents">
+            <p>
+              החלה ההרשמה לבית הספר המקצועי לטניס
+              <br />
+                אימוני טניס לילדים בכל הרמות, בהדרכת המאמנים
+              <br />
+                הטובים בישראל. לגילאי 18-4
+            </p>
+            <div class="subtitle-mobile-container">
               <p class="mobile-hero">
                 אימוני טניס בכל הרמות
                 <br />
@@ -178,12 +199,11 @@
 
             <form
               onsubmit="handleSubmit(event)"
-              dir="rtl"
               class=""
               data-select2-id="4"
               novalidate="novalidate"
             >
-              <div dir="rtl" class="card">
+              <div class="card">
                 <div class="input_error">
                   <input
                     id="input_1"
@@ -204,7 +224,6 @@
                     id="phone"
                     title="נא להכניס מספר טלפון תקין"
                     placeholder="מספר טלפון"
-                    dir="rtl"
                     required=""
                   />
                   <p id="tooltip_2" class="tooltip_error">יש למלא את השדה</p>
@@ -245,8 +264,7 @@
             </form>
           </div>
         </div>
-      </div>
-        <div class="main-image">
+        <div class="mobile-image">
           <img
             class="animate_opacity"
             src="./images/image.png"
@@ -259,8 +277,8 @@
 
     <hr />
 
-    <div dir="rtl" id="section3" class="footer-mobile">
-      <div class="logo-mobile-container">
+    <div id="section3" class="footer">
+      <div class="logo-container">
         <img
           class="logo-image"
           src="./images/logo.png"
@@ -276,12 +294,6 @@
           <p class="tel black-font">6227*</p>
         </div>
     </div>
-
-    <!-- <img
-      class="logo-desktop"
-      src="./images/logo.png"
-      alt="לוגו מרכזי הטניס והחינוך בישראל"
-    /> -->
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>

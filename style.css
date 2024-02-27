@@ -59,7 +59,8 @@ body {
 .sidebar {
   color: black;
   position: absolute;
-  top: 1.2%;
+  top: 10px;
+  left: 10px;
   font-size: 45px;
   z-index: 3;
   background-color: rgb(249 245 245);
@@ -134,21 +135,26 @@ body {
   padding: 0 5%;
 }
 
-.right {
+.desktop-right {
   display: flex;
   flex-direction: column;
   flex: 1.3;
-  margin-bottom: 5px;
-  width: 100%;
 }
 
-.right p {
+.desktop-right p {
   text-align: right;
   font-size: 35px;
   font-family: "FbSpoiler-Bold";
 }
 
-.center-contents {
+  
+.desktop-right .desktop-image img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.left-contents {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -321,19 +327,6 @@ hr {
   margin-top: -15px;
 }
 
-.footer-desktop {
-  background-color: rgb(78, 163, 78);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 25px;
-}
-
-.logo-desktop {
-  margin-top: -150px;
-  width: 8vw;
-}
-
 .animate_opacity {
   opacity: 0;
   transform: translateY(-300px);
@@ -345,10 +338,60 @@ hr {
   transform: translateY(0);
 }
 
+.footer {
+  background-color: rgb(78, 163, 78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+  position: relative;
+  height: 150px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container .logo-image {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  z-index: 1;
+  top: -30%;
+}
+
+.footer .footer-title {
+  font-size: 120%;
+  color: white;
+  font-family: "FbSpoiler-Regular";
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: lighter;
+  white-space: nowrap;
+  padding-top: 10px;
+}
+.black-font {
+  font-family: "FbSpoiler-Black";
+}
+.footer .footer-contact{
+  font-size: 120%;
+  color: white;
+  font-family: "FbSpoiler-Regular"; 
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: lighter;
+  white-space: nowrap;
+}
+
 @media only screen and (min-width: 901px) {
   .main-title-mobile, 
-  .logo-mobile,
-  .subtitle-mobile-container
+  .subtitle-mobile-container,
+  .mobile-image
   {
     display: none;
   }
@@ -358,6 +401,11 @@ hr {
 }
 
 @media only screen and (max-width: 900px) {
+  .main-title-desktop,
+  .desktop-right
+  {
+    display: none;
+  }
   .line {
     width: 50%; /* Half the width of the screen */
     margin: 0 auto; /* Center the line horizontally */
@@ -442,13 +490,13 @@ hr {
     border-radius: 15px;
   }
 
-  .main-image {
+  .mobile-image {
     justify-content: center;
     margin-left: 10px;
     margin-bottom: -20px;
   }
 
-  .main-image img {
+  .mobile-image img {
     width: 100%;
   }
 
@@ -456,7 +504,7 @@ hr {
     margin-bottom: 1px;
   }
 
-  .footer-mobile {
+  .footer {
     background-color: rgb(78, 163, 78);
     display: flex;
     flex-direction: column;
@@ -467,7 +515,7 @@ hr {
     height: 150px;
   }
 
-  .logo-mobile-container {
+  .logo-container {
     display: flex;
     flex-direction: column;
     margin-top: 3%;
@@ -475,7 +523,7 @@ hr {
     align-items: center;
   }
 
-  .logo-mobile-container .logo-image {
+  .logo-container .logo-image {
     width: 75px;
     height: 75px;
     position: absolute;
@@ -483,7 +531,7 @@ hr {
     top: -30%;
   }
 
-  .footer-mobile .footer-title {
+  .footer .footer-title {
     font-size: 120%;
     color: white;
     font-family: "FbSpoiler-Regular";
@@ -496,7 +544,7 @@ hr {
   .black-font {
     font-family: "FbSpoiler-Black";
   }
-  .footer-mobile .footer-contact{
+  .footer .footer-contact{
     font-size: 120%;
     color: white;
     font-family: "FbSpoiler-Regular"; 
