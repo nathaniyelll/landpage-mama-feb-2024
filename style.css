@@ -394,17 +394,15 @@ hr {
   justify-content: center;
   row-gap: 10px;
   position: relative;
-  height: calc(100vh - 617px);
 }
 
 .footer .logo-container {
   display: flex;
   flex-direction: column;
-  margin-top: 3%;
   justify-content: center;
   align-items: center;
-  top: -110px;
   position: absolute;
+  top: -80px;
 }
 
 .footer .logo-container .logo-image {
@@ -418,6 +416,7 @@ hr {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  padding: 20px 0;
 }
 
 .footer .footer-title,
@@ -580,13 +579,17 @@ hr {
     position: relative;
   }
 
+  .footer-mobile{
+    padding: 25px 0;
+  }
+
   .footer .logo-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -60px;
+    top: -40px;
   }
 
   .footer .logo-container .logo-image {
