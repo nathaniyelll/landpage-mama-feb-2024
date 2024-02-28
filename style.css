@@ -46,6 +46,7 @@ body {
 
 .container {
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .black-font {
@@ -202,8 +203,6 @@ body {
 .card {
   max-width: 100%;
   min-width: 30vw;
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -213,19 +212,30 @@ body {
   z-index: 3;
 }
 
+input::placeholder,
+.select2 {
+  padding-right: 10px;
+}
+
+.card .button-container{
+  display: flex;
+  justify-content: center;
+}
+
 .card button {
-  background-color: rgb(31, 31, 83);
-  color: white;
-  border: none;
-  font-size: 23px;
-  padding: 6px 0;
-  margin-top: 15px;
-  font-family: FbSpoiler-Bold;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-size: 30px;
+  font-family: FbSpoiler-Black;
+  background-color: transparent;
+  border-radius: 8px;
+  width: 50%;
+  margin: 0;
 }
 
 button:hover {
   cursor: pointer;
-  background: #1d2fff;
+  background: lightblue;
 }
 
 select {
@@ -236,12 +246,12 @@ select {
   font-weight: bold;
 }
 
-option {
-  color: black;
+.select2:hover {
+  cursor: pointer;
 }
 
-select:hover {
-  cursor: pointer;
+option {
+  color: black;
 }
 
 .card input {
@@ -255,8 +265,8 @@ select:hover {
   border: none;
   outline: none;
   width: 100%;
-  border-bottom: 1px solid #fff;
-  background: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
 }
 
 input::placeholder {
@@ -314,13 +324,14 @@ input::placeholder {
 }
 
 .select2 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   height: 35px;
   width: 100% !important;
-  border-bottom: 1px solid #fff;
+  border: 1px solid var(--primary-color);
   background: transparent !important;
   color: #014282;
   font-size: 25px;
+  border-radius: 8px;
   font-family: "FbSpoiler-Bold";
 }
 
@@ -423,7 +434,7 @@ hr {
 }
 
 .footer-prize h1{
-  font-size: 45px;
+  font-size: 60px;
   margin-bottom: 5px;
 }
 
@@ -519,6 +530,7 @@ hr {
 
   .hero-subtitle-container {
     display: flex;
+    flex-direction: row;
     gap: 3px;
   }
 
