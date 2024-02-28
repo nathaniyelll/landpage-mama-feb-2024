@@ -44,6 +44,14 @@ body {
   border: 10px solid white;
 }
 
+.container {
+  width: 100%;
+}
+
+.black-font {
+  font-family: "FbSpoiler-Black";
+}
+
 #svg-accessiblity {
   position: absolute;
   background-color: white;
@@ -123,10 +131,9 @@ body {
 .main-title-desktop h1 {
   font-size: 100px;
   color: white;
-  font-family: "FbSpoiler-Black";
+  font-family: "FbSpoiler-Light";
   letter-spacing: 2px;
   text-align: center;
-  padding-bottom: 35px;
 }
 
 .midSection {
@@ -147,18 +154,49 @@ body {
   font-family: "FbSpoiler-Bold";
 }
 
-  
 .desktop-right .desktop-image img {
   width: 100%;
-  margin-bottom: 20px;
+  height: 500px;
 }
 
-.left-contents {
+.left-desktop-center-mobile-container {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.hero-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  color: var(--primary-color);
+  font-size: 50px;
+  text-align: center;
+  font-family: FbSpoiler-bold;
+  white-space: nowrap;
+}
+
+.hero-subtitle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-subtitle {
+  color: var(--primary-color);
+  font-size: 40px;
+  text-align: center;
+  font-family: "FbSpoiler-Regular";
+  padding-top: 6px;
+  white-space: nowrap;
 }
 
 .card {
@@ -341,58 +379,72 @@ hr {
 .footer {
   background-color: rgb(78, 163, 78);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 10px;
   position: relative;
-  height: 150px;
+  height: calc(100vh - 617px);
 }
 
-.logo-container {
+.footer .logo-container {
   display: flex;
   flex-direction: column;
   margin-top: 3%;
   justify-content: center;
   align-items: center;
-}
-
-.logo-container .logo-image {
-  width: 75px;
-  height: 75px;
+  top: -110px;
   position: absolute;
-  z-index: 1;
-  top: -30%;
 }
 
-.footer .footer-title {
-  font-size: 120%;
+.footer .logo-container .logo-image {
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+}
+
+.footer-desktop{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.footer .footer-title,
+.footer-prize {
   color: white;
+  font-family: "FbSpoiler-Bold";
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 30px;  
+}
+
+.footer .footer-title p {
+  margin-bottom: 10px;
+}
+
+.footer-prize h1{
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.footer-prize p {
+  font-size: 20px;
   font-family: "FbSpoiler-Regular";
-  letter-spacing: 2px;
-  text-align: center;
-  font-weight: lighter;
-  white-space: nowrap;
-  padding-top: 10px;
-}
-.black-font {
-  font-family: "FbSpoiler-Black";
-}
-.footer .footer-contact{
-  font-size: 120%;
+} 
+
+.contact-tel{
+  text-decoration: none;
   color: white;
-  font-family: "FbSpoiler-Regular"; 
-  letter-spacing: 2px;
-  text-align: center;
-  font-weight: lighter;
-  white-space: nowrap;
+}
+.contact-tel:hover{
+  color: #C1D833;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 901px) {
-  .main-title-mobile, 
-  .subtitle-mobile-container,
-  .mobile-image
-  {
+  .main-title-mobile,
+  .mobile-image,
+  .footer-mobile {
     display: none;
   }
   .card {
@@ -402,10 +454,12 @@ hr {
 
 @media only screen and (max-width: 900px) {
   .main-title-desktop,
-  .desktop-right
-  {
+  .desktop-right,
+  .desktop-left-content,
+  .footer-desktop {
     display: none;
   }
+
   .line {
     width: 50%; /* Half the width of the screen */
     margin: 0 auto; /* Center the line horizontally */
@@ -447,15 +501,14 @@ hr {
     flex-direction: column;
   }
 
-  .subtitle-mobile-container {
-    width: 60%;
+  .hero-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .mobile-hero {
+  .hero-title {
     color: var(--primary-color);
     font-size: 20px;
     text-align: center;
@@ -464,17 +517,18 @@ hr {
     white-space: nowrap;
   }
 
-  .mobile-sub-hero {
+  .hero-subtitle-container {
+    display: flex;
+    gap: 3px;
+  }
+
+  .hero-subtitle {
     color: var(--primary-color);
     font-size: 15px;
     text-align: center;
     font-family: FbSpoiler-bold;
     padding-top: 6px;
     white-space: nowrap;
-  }
-
-  .form-circle-container {
-    position: relative;
   }
 
   .card {
@@ -512,23 +566,21 @@ hr {
     justify-content: center;
     row-gap: 10px;
     position: relative;
-    height: 150px;
   }
 
-  .logo-container {
+  .footer .logo-container {
     display: flex;
     flex-direction: column;
-    margin-top: 3%;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: -60px;
   }
 
-  .logo-container .logo-image {
+  .footer .logo-container .logo-image {
     width: 75px;
     height: 75px;
-    position: absolute;
     z-index: 1;
-    top: -30%;
   }
 
   .footer .footer-title {
@@ -540,14 +592,15 @@ hr {
     font-weight: lighter;
     white-space: nowrap;
     padding-top: 10px;
+    margin-bottom: 20px;
   }
   .black-font {
-    font-family: "FbSpoiler-Black";
+    font-family: "FbSpoiler-Black"!important;
   }
-  .footer .footer-contact{
+  .footer .footer-contact {
     font-size: 120%;
     color: white;
-    font-family: "FbSpoiler-Regular"; 
+    font-family: "FbSpoiler-Regular";
     letter-spacing: 2px;
     text-align: center;
     font-weight: lighter;
