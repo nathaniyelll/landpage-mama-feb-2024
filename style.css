@@ -256,13 +256,11 @@ option {
 
 .card input {
   width: 100%;
-  border: none;
   background: transparent;
   font-family: FbSpoiler-Bold;
   font-size: 25px;
   height: 35px;
   color: #014282;
-  border: none;
   outline: none;
   width: 100%;
   border: 1px solid var(--primary-color);
@@ -606,8 +604,7 @@ hr {
     text-align: center;
     font-weight: lighter;
     white-space: nowrap;
-    padding-top: 10px;
-    margin-bottom: 20px;
+    margin: 20px;
   }
   .black-font {
     font-family: "FbSpoiler-Black"!important;
