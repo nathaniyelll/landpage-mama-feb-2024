@@ -605,7 +605,7 @@ hr {
   }
 
   .card input {
-    width: 100%;
+    max-width: 400px;
   }
 
   .button-container {
