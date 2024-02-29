@@ -99,7 +99,7 @@ $(document).ready(function() {
     tooltip_1.style.visibility == "hidden" ? tooltip_2.style.visibility = input_2.value.match(/^05\d{8}$/)
       ? "hidden" : "visible" : "";
     (tooltip_1.style.visibility == "hidden" && tooltip_2.style.visibility == "hidden") ?
-    tooltip_3.style.visibility = input_3.value == "" ? "visible" : "hidden" : "";
+    tooltip_3.style.visibility = input_3.value == "" ? "visible" : "hidden" : "hidden";
     isShowError = true;
   
     if (
