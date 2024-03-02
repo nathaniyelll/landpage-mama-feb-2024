@@ -506,6 +506,7 @@ hr {
   }
 }
 
+
 @media only screen and (max-width: 999px) {
 
   .main-title-desktop,
@@ -697,4 +698,68 @@ hr {
     font-weight: lighter;
     white-space: nowrap;
   }
+}
+
+@media screen and (max-width: 359px), screen and (max-height:768){
+  body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .container{
+    width: 100%;
+    min-height: 100vh;
+    flex: 1;
+  }
+  .mobile-image{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    position: absolute;
+    bottom: 90px;
+  }
+  .mobile-image img {
+    width: 50%;
+  }
+
+  .footer{
+    position: sticky;
+    bottom: 0;
+    border-top: 10px solid #fff;
+  }
+
+  .footer-mobile {
+    padding: 10px 0;
+  }
+
+  .footer .logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -30px;
+  }
+
+  .footer .logo-container .logo-image {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+  }
+
+  .footer .footer-title {
+    font-size: 15px;
+    color: white;
+    font-family: "FbSpoiler-Regular";
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: lighter;
+    white-space: nowrap;
+    margin: 10px;
+  }
+
+  hr{
+    display: none;
+  }
+
 }
