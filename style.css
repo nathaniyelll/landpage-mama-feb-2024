@@ -225,11 +225,7 @@ body {
 
 .hero-container .line {
   width: 60%;
-  /* Half the width of the screen */
-  margin: 0 auto;
-  /* Center the line horizontally */
   border-top: 2px solid white;
-  /* Horizontal line */
   margin: 5px 0;
 }
 
@@ -244,7 +240,7 @@ body {
   flex-direction: column;
   width: 400px;
   row-gap: 15px;
-  margin: 30px;
+  margin: 30px 0;
   z-index: 3;
   gap: 15px;
 }
