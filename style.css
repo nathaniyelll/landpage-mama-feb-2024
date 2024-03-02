@@ -256,7 +256,7 @@ body {
   font-size: 40px;
   font-family: FbSpoiler-Black;
   background-color: transparent;
-  border-radius: 15px;
+  border-radius: 8px;
   width: 250px;
   margin: 0;
 }
@@ -496,69 +496,16 @@ hr {
   cursor: pointer;
 }
 
-
-
 @media only screen and (min-width: 1000px) {
+
   .main-title-mobile,
   .mobile-hero-solgan,
   .mobile-image,
   .footer-mobile {
     display: none;
   }
-
-  body{
-    height: 100vh;
-    border: none;
-    box-shadow: inset 0px 0px 0px 10px #fff;
-  }
-
-  .container{
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
-  }
-
-  
-  hr{
-    display: none;
-  }
-
-  .footer{
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    border: 10px solid #fff;
-  }
-
-  .left-desktop-container{
-    margin-top: 100px;
-  }
-
-  #section2{
-    justify-content: space-between;
-  }
-
-  .desktop-right{
-    margin: 0;
-  }
-
-  .desktop-right{
-    position: relative;
-  }
-
-  .desktop-right .desktop-image{
-    margin: 0;
-    bottom: -90px;
-    left: 30%;
-    transform: translate(-90%, 0%);
-    position: absolute;
-  }
-
-  .desktop-right .desktop-image img{
-    height: 700px;
-    width: auto;
-  }
 }
+
 
 @media only screen and (max-width: 999px) {
 
@@ -680,7 +627,7 @@ hr {
   }
 
   .card button {
-    width: 200px;
+    /* width: 200px; */
     font-size: 30px;
   }
 
@@ -688,10 +635,13 @@ hr {
     justify-content: center;
     margin-left: 10px;
     margin-bottom: -20px;
+    display: grid;
+    place-items: center;
   }
 
   .mobile-image img {
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
   }
 
   hr {
@@ -753,65 +703,66 @@ hr {
   }
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1197px){
-  #section2{
-    padding: 0 2%;
-  }
-
-  .desktop-right .desktop-image img{
-    height: 600px;
-    width: auto;
-  
-}
-}
-
-@media only screen and (min-width: 1411px){
+@media screen and (max-width: 359px), screen and (max-height:768){
   body{
     height: 100vh;
-    border: none;
-    box-shadow: inset 0px 0px 0px 10px #fff;
+    display: flex;
+    flex-direction: column;
   }
-
   .container{
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    flex: 1;
   }
-
-  #section2{
-    gap: 600px;
-    justify-content: space-around;
-  }
-
-  .left-desktop-container{
-    margin-top: 100px;
-  }
-
-  .desktop-right{
-    position: relative;
-  }
-
-  .desktop-image{
-    width: 750px;
-    bottom: -90px;
-    left: 30%;
-    transform: translate(-60%, 0%);
+  .mobile-image{
+    display: flex;
+    justify-content: center;
+    margin: 0;
     position: absolute;
+    bottom: 0;
+  }
+  .mobile-image img {
+    width: 50%;
   }
 
-  .desktop-right .desktop-image img{
-    height: 700px;
-    width: auto;
+  .footer{
+    /* position: sticky; */
+    bottom: 0;
+    border-top: 10px solid #fff;
+  }
+
+  .footer-mobile {
+    padding: 10px 0;
+  }
+
+  .footer .logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -30px;
+  }
+
+  .footer .logo-container .logo-image {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+  }
+
+  .footer .footer-title {
+    font-size: 15px;
+    color: white;
+    font-family: "FbSpoiler-Regular";
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: lighter;
+    white-space: nowrap;
+    margin: 10px;
   }
 
   hr{
     display: none;
   }
 
-  .footer{
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    border: 10px solid #fff;
-  }
 }
